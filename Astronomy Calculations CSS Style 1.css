@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+        /* Author: Tyler Livingston
+        Start date: 6/1/2020
+        Updated: 6/1/2020
+        Purpose: To calculate common equations related to astronomy */
+
+html {
+   background-color: rgb(12, 36, 59);
+}
+
+/* Page Body Styles */
+body {
+   background-color: rgb(219, 219, 216);
+   font-family: Verdana, Geneva, Arial, sans-serif; 	
+   margin-left: auto;
+   margin-right: auto;
+   width: 960px;  
+}
+
+/* Body Header Styles */
+body > header > img {
+	display: block;
+	width: 100%;
+}
+
+body > header > nav#topLinks {
+	background-color: rgb(255, 255, 255);
+	color: white;
+	line-height: 1.7em;
+	text-align: right;
+	padding: 5px 10px 5px 0px;
+}
+
+nav#topLinks a:link, nav#topLinks a:visited {
+	color: white;
+}
+
+nav#topLinks a:hover, nav#topLinks a:active {
+	color: rgb(248, 237, 212);
+}
+
+nav#mainLinks ul li {
+	background-color: rgb(155, 155, 155);	
+	display: block;
+	float: left;
+	text-align: center;
+    width: 20%;	
+}
+
+nav#mainLinks ul li a {
+	color: white;	
+	display: block;
+	height: 2.5em;	
+	text-align: center;
+	line-height: 2.5em;	
+}
+
+nav#mainLinks a:link, nav#mainLinks a:visited {
+	color: white;
+}
+
+nav#mainLinks a:hover, nav#mainLinks a#currentPage {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Article  Styles */
+
+article {
+   clear: left;	
+   width: 90%;
+   margin: 10px auto;
+   padding: 10px 20px;
+}
+
+article h1 {
+	font-family: Baskerville, "Palatino Linotype", Palatino, 
+	             "Century Schoolbook", "Times New Roman", serif;
+	font-size: 2.5em;
+	color: rgb(0, 0, 0);	
+	text-align: center;	
+}
+
+article p {
+	clear: both;
+    margin-bottom: 20px;	
+	text-align: center;
+}
+
+article > p#websiteOverviewText {
+    text-align: left;
+}
+
+article > ul#LinksForWebsitesOfInterest {
+    padding-left: 2.5em;
+}
+
+article::after {
+   clear: both;   
+   content: "";
+   display: table;
+}
+
+fieldset#travelToAnotherStarSystem > p#selectUnit, p#inputSpeed, p#inputDistance{
+	text-align: left;
+}
+
+fieldset#travelToAnotherStarSystem > input{
+	float: right;
+}
+
+/* Footer Styles */
+footer {
+	background-color: rgb(155, 155, 155);	
+	color: white;	
+	font-size: 0.7em;
+	padding: 25px;
+}
+
+footer > div.companyName{
+    float: left;
+}
+
+footer > div.versionNumber{
+    float: right;
+}
+
+
