@@ -4,16 +4,16 @@
     <!--
         Author: Tyler Livingston
         Start date: 5/20/2020
-        Updated: 6/7/2020
+        Updated: 6/11/2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
     <title>Astronomy Calculator - Time</title>
-    <!-- JS -->
-    <script src="AstronomyCalculationTravelToAnotherStarSystemJS.js"></script>
     <!-- CSS -->
     <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
     <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
+    <!-- JS -->
+    <script src="AstronomyCalculationTravelToAnotherStarSystemJS.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
                 <li><a href="AstronomyCalculationHome.html">Home</a></li>
                 <li><a href="AstronomyCalculationDistance.html">Distance</a></li>
                 <li><a href="AstronomyCalculationTime.html" id="currentPage">Time</a></li>
-                <li><a href="#">Units</a></li>
-                <li><a href="#">Other</a></li>
+                <li><a href="AstronomyCalculationUnits.html">Units</a></li>
+                <li><a href="AstronomyCalculationOther.html">Other</a></li>
             </ul>
         </nav>
     </header>
@@ -39,35 +39,59 @@
             <legend>
                 <h2>How long would it take to travel to another star system?</h2>
             </legend>
-            <p id="travelToAnotherStarSystemDescription"></p>
+            <p id="travelToAnotherStarSystemDescription">
+                This function will help you determine how long (in years) it would take you to travel
+                from Earth to another star system. For this calculation, you will need to know the
+                average speed (MPH or KM/H) of the spacecraft that would be used and the distance
+                (Lightyears) from Earth to desired star system.
+            </p>
+            <div id="travelToAnotherStarSystemDescriptionNotes">
+                <ul id="travelToAnotherStarSystemDescriptionNotesList">
+                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">Currently, the fastest manned spacecraft is, <a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html" target="_blank">N.A.S.A.'s Apollo 10 spacecraft</a>, which reached the top speed of 24,791 MPH (39,897 KM/P)</li>
+                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">The closest star system to Earth is Alpha Centauri, which is approximately 4.37 Light-years away.</li>
+                </ul>
+            </div>
             <!-- Unit of measurement -->
-            <label for="selectUnit">Please select a unit of measurement.
+            <label for="selectUnit">Unit of measurement:
                 <select id="travelToAnotherStarSystemUnit">
-                    <option value="Metric" selected>Metric (KmPH)</option>
+                    <option value="Metric" selected>Metric (KM/H)</option>
                     <option value="Standard">Standard (MPH)</option>
                 </select>
             </label>
             <br>
             <!-- Distance (In light-years) -->
-            <label id="inputDistance">Enter the estimated distance between our star system and the desired star system.
+            <label id="inputDistance">Estimated distance (Light-year(s)):
                 <input type="number" id="travelToAnotherStarSystemDistance" />
             </label>
             <br>
             <!-- Speed of spacecraft -->
-            <label id="inputSpeed">Enter the speed of the spacecraft.
+            <label id="inputSpeed">Speed of spacecraft:
                 <input type="number" id="travelToAnotherStarSystemSpeedOfSpacecraft" />
             </label>
             <br>
+            <!-- Area where the user submits his or her provided data -->
+            <div id=travelToAnotherStarSystemSubmitDataArea>
+                <input id="travelToAnotherStarSystemSubmitButton" type="button" value="Submit">
+            </div>
+            <br>
+            <!-- Area where the user receives his or her result -->
+            <div id="travelToAnotherStarSystemResultArea">
+                <p id="travelToAnotherStarSystemResult"></p>
+            </div>
+            <br>
         </fieldset>
+
+
+
     </article>
 
     <footer id="footer">
-        <nav class="companyName" id="companyName">
+        <div class="companyName" id="companyName">
             Tyler Livingston 2020
-        </nav>
-        <nav class="versionNumber" id="versionNumber">
+        </div>
+        <div class="versionNumber" id="versionNumber">
             Version: 0.1.0
-        </nav>
+        </div>
     </footer>
 </body>
 
