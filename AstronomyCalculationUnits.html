@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <!--
+        Author: Tyler Livingston
+        Start date: 6/15/2020
+        Updated: 6/16/2020
+        Purpose: To calculate common equations related to astronomy
+        -->
+    <meta charset="utf-8" />
+    <title>Astronomy Calculator - Home</title>
+    <!-- CSS -->
+    <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
+    <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="ac_logo.png" alt="Astronomy Calculator" />
+        <nav class="horizontal" id="mainLinks">
+            <ul>
+                <li><a href="AstronomyCalculationHome.html">Home</a></li>
+                <li><a href="AstronomyCalculationDistance.html">Distance</a></li>
+                <li><a href="AstronomyCalculationTime.html">Time</a></li>
+                <li><a href="AstronomyCalculationUnits.html" id="currentPage">Units</a></li>
+                <li><a href="AstronomyCalculationOther.html">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Astronomy Calculator - Units</h1>
+        <br><br>
+
+        <!-- Converting Light-year(s) & Mile(s) -->
+        <fieldset id="convertingLightYearsAndMiles">
+            <legend>
+                <h2>Converting Light-year(s) and Mile(s)</h2>
+            </legend>
+            <!-- Convert Light-year(s) to Mile(s) -->
+            <form oninput="x.value=parseFloat(5.879e+12)*parseFloat(convertLightYearsToMiles.value)">
+                <br><br>
+                <input type="float" id="convertLightYearsToMiles" name="convertLightYearsToMiles" value="0" min="0">
+                Light-year(s)
+                =
+                <output name="x" for="convertLightYearsToMiles">0</output>
+                Mile(s)
+                <br><br>
+            </form>
+            <!-- Convert Mile(s) to Light-year(s) -->
+            <form oninput="x.value=parseFloat(convertMilesToLightYears.value)/parseFloat(5.879e+12)">
+                <br><br>
+                <input type="float" id="convertMilesToLightYears" name="convertMilesToLightYears" value="0" min="0">
+                Mile(s)
+                =
+                <output name="x" for="convertMilesToLightYears">0</output>
+                Light-year(s)
+                <br><br>
+            </form>
+        </fieldset>
+        <br><br>
+        <!-- Converting Light-year(s) & Kilometer(s) -->
+        <fieldset id="convertingLightYearsAndKilometers">
+            <legend>
+                <h2>Converting Light-year(s) and Kilometer(s)</h2>
+            </legend>
+            <!-- Convert Light-year(s) to Kilometer(s) -->
+            <form oninput="x.value=parseFloat(9.461e+12)*parseFloat(convertLightYearsToKilometers.value)">
+                <br><br>
+                <input type="float" id="convertLightYearsToKilometers" name="convertLightYearsToKilometers" value="0"
+                    min="0">
+                Light-year(s)
+                =
+                <output name="x" for="convertLightYearsToKilometers">0</output>
+                Kilometer(s)
+                <br><br>
+            </form>
+            <!-- Convert Kilometer(s) to Light-year(s) -->
+            <form oninput="x.value=parseFloat(convertKilometersToLightYears.value)/parseFloat(9.461e+12)">
+                <br><br>
+                <input type="float" id="convertKilometersToLightYears" name="convertKilometersToLightYears" value="0"
+                    min="0">
+                Kilometer(s)
+                =
+                <output name="x" for="convertKilometersToLightYears">0</output>
+                Light-year(s)
+                <br><br>
+            </form>
+            <br><br>
+        </fieldset>
+        <br><br>
+        <!-- Converting Astronomical Unit(s) to Light-year(s), Kilometer(s), and Mile(s) -->
+        <fieldset id="convertingLightYearsAndMiles">
+            <legend>
+                <h2>Converting Astronomical Unit(s) to Light-year(s), Kilometer(s), and Mile(s)</h2>
+            </legend>
+            <!-- Convert Astronomical Unit(s) to Mile(s) -->
+            <form oninput="x.value=parseFloat(9.296e+7)*parseFloat(convertAstronomicalUnitsToMiles.value)">
+                <br><br>
+                <input type="float" id="convertAstronomicalUnitsToMiles" name="convertAstronomicalUnitsToMiles"
+                    value="0" min="0">
+                Astronomical Unit(s)
+                =
+                <output name="x" for="convertAstronomicalUnitsToMiles">0</output>
+                Mile(s)
+                <br><br>
+            </form>
+            <!-- Convert Astronomical Unit(s) to Kilometer(s) -->
+            <form oninput="x.value=parseFloat(1.496e+8)*parseFloat(convertAstronomicalUnitsToKilometers.value)">
+                <br><br>
+                <input type="float" id="convertAstronomicalUnitsToKilometers"
+                    name="convertAstronomicalUnitsToKilometers" value="0" min="0">
+                Astronomical Unit(s)
+                =
+                <output name="x" for="convertAstronomicalUnitsToKilometers">0</output>
+                Kilometer(s)
+                <br><br>
+            </form>
+            <!-- Convert Astronomical Unit(s) to Light-Year(s) -->
+            <form oninput="x.value=parseFloat(1.58125e-5)*parseFloat(convertAstronomicalUnitsToLightyears.value)">
+                <br><br>
+                <input type="float" id="convertAstronomicalUnitsToLightyears"
+                    name="convertAstronomicalUnitsToLightyears" value="0" min="0">
+                Astronomical Unit(s)
+                =
+                <output name="x" for="convertAstronomicalUnitsToLightyears">0</output>
+                Light-year(s)
+                <br><br>
+            </form>
+        </fieldset>
+    </article>
+
+    <footer id="footer">
+        <div class="companyName" id="companyName">
+            Tyler Livingston 2020
+        </div>
+        <div class="versionNumber" id="versionNumber">
+            Version: 0.1.0
+        </div>
+    </footer>
+
+</body>
+
+</html>

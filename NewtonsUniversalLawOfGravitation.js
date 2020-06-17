@@ -1,3 +1,9 @@
+// Tyler Livingston
+// Created: June 16, 2020
+// Updated: June 16, 2020
+// - Will calculate the gravitational force
+//     between two objects.
+
 window.onload=function(){
     var mb = document.getElementById("newtonsUniversalLawOfGravitationSubmitButton");
     mb.addEventListener("click", calculateGravitationalForce);
@@ -9,10 +15,10 @@ const getMassOfObjectOne=function() {
     var power = document.getElementById("newtonsUniversalLawOfGravitationMassOfObjectOneApplyScientificNotation").value;
     if (power != "") {
         mass = massTemp * Math.pow(10, power);
-        console.log("Calculated mass one: " + mass);
+        // console.log("Calculated mass one: " + mass);
     }else{
         mass = massTemp;
-        console.log("Desired mass one: " + mass);
+        // console.log("Desired mass one: " + mass);
     }
     return mass;
 }
@@ -23,10 +29,10 @@ const getMassOfObjectTwo=function() {
     var power = document.getElementById("newtonsUniversalLawOfGravitationMassOfObjectTwoApplyScientificNotation").value;
     if (power != "") {
         mass = massTemp * Math.pow(10, power);
-        console.log("Calculated mass two: " + mass);
+        // console.log("Calculated mass two: " + mass);
     }else{
         mass = massTemp;
-        console.log("Desired mass two: " + mass);
+        // console.log("Desired mass two: " + mass);
     }
     return mass;
 }
@@ -37,10 +43,10 @@ const getGravitationalConstant=function() {
     var power = document.getElementById("newtonsUniversalLawOfGravitationGravitationalConstantApplyScientificNotation").value;
     if (power != "") {
         gravitationalConstant = gravitationalConstantTemp * Math.pow(10, power);
-        console.log("Calculated gravitational constant: " + gravitationalConstant);
+        // console.log("Calculated gravitational constant: " + gravitationalConstant);
     }else{
         gravitationalConstant = gravitationalConstantTemp;
-        console.log("Desired gravitational constant: " + gravitationalConstant);
+        // console.log("Desired gravitational constant: " + gravitationalConstant);
     }
     return gravitationalConstant;
 }
@@ -49,12 +55,12 @@ const getDistanceBetweenTwoObjects=function() {
     var distanceBetweenTwoObjects = null;
     var distanceBetweenTwoObjectsTemp = document.getElementById("newtonsUniversalLawOfGravitationDistanceBetweenTwoObjects").value;
     var power = document.getElementById("newtonsUniversalLawOfGravitationDistanceBetweenTwoObjectsApplyScientificNotation").value;
-    if (power != "N/A") {
+    if (power != "") {
         distanceBetweenTwoObjects = distanceBetweenTwoObjectsTemp * Math.pow(10, power);
         // console.log("Calculated distance between two objects: " + distanceBetweenTwoObjects);
     }else{
         distanceBetweenTwoObjects = distanceBetweenTwoObjectsTemp;
-        console.log("Desired distance between two objects: " + distanceBetweenTwoObjects);
+        // console.log("Desired distance between two objects: " + distanceBetweenTwoObjects);
     }
     return distanceBetweenTwoObjects;
 }
@@ -65,10 +71,10 @@ const calculateGravitationalForce=function(){
     var gravitationalConstant = getGravitationalConstant.call();
     var distanceBetweenObjects = getDistanceBetweenTwoObjects.call();
     var numerator = (gravitationalConstant * massOne * massTwo);
-    console.log("numerator: " + numerator);
+    // console.log("numerator: " + numerator);
     var denominator = Math.pow(distanceBetweenObjects,2);
-    console.log("denominator:" + denominator);
+    // console.log("denominator:" + denominator);
     var gravitationalForce = (numerator/denominator);
-    console.log("gravitationalForce: " + gravitationalForce);
+    // console.log("gravitationalForce: " + gravitationalForce);
     document.getElementById("newtonsUniversalLawOfGravitationResult").innerHTML="Gravitational Force = " + gravitationalForce.toLocaleString();
 }
