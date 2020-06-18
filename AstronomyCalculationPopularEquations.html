@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+   <!--
+        Author: Tyler Livingston
+        Start date: 5/20/2020
+        Updated: 6/7/2020
+        Purpose: To calculate common equations related to astronomy
+        -->
+   <meta charset="utf-8" />
+   <title>Astronomy Calculator - Popular Equations</title>
+   <!-- CSS -->
+   <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
+   <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
+   <!-- JS -->
+   <script src="NewtonsUniversalLawOfGravitation.js"></script>
+</head>
+
+<body>
+   <header>
+      <img src="ac_logo.png" alt="Astronomy Calculator" />
+      <nav class="horizontal" id="mainLinks">
+         <ul>
+            <li><a href="AstronomyCalculationHome.html">Home</a></li>
+            <li><a href="AstronomyCalculationTime.html">Time</a></li>
+            <li><a href="AstronomyCalculationConvertUnits.html">Convert Units</a></li>
+            <li><a href="AstronomyCalculationPopularEquations.html" id="currentPage">Popular Equations</a></li>
+            <li><a href="AstronomyCalculationOther.html">Other</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <article>
+      <h1>Astronomy Calculator - Popular Equations</h1>
+      <br><br>
+      <!-- Newton's Universal Law of Gravitation -->
+      <fieldset id="newtonsUniversalLawOfGravitation">
+         <legend>
+            <h2>Newton's Universal Law of Gravitation</h2>
+         </legend>
+         <p id="newtonsUniversalLawOfGravitationDescription">
+            Isaac Newton had concluded that the magnitude of the force of gravity
+            must decrease with increasing distance between two objects
+            (For example: The Sun and a planet) in proportion to the inverse
+            square of their separation. To determine the gravitational attraction
+            between any two objects, use the equation below.
+         </p>
+         <div id="newtonsUniversalLawOfGravitationEquation">
+            F gravity = G M1 * M2 / Rs
+         </div>
+         <div id="newtonsUniversalLawOfGravitationDescriptionNotes">
+            <ul id="newtonsUniversalLawOfGravitationDescriptionNotesList">
+               <li id="newtonsUniversalLawOfGravitationDescriptionNotesListItem"><i>F gravity</i> - Gravitational
+                  force between two objects</li>
+               <li id="newtonsUniversalLawOfGravitationDescriptionNotesListItem"><i>G</i> - Gravitational constant
+               </li>
+               <li id="newtonsUniversalLawOfGravitationDescriptionNotesListItem"><i>M1</i> - Mass of object one
+               </li>
+               <li id="newtonsUniversalLawOfGravitationDescriptionNotesListItem"><i>M2</i> - Mass of object two
+               </li>
+               <li id="newtonsUniversalLawOfGravitationDescriptionNotesListItem"><i>G</i> - Distance between
+                  objects one & two</li>
+            </ul>
+         </div>
+
+         <div id="newtonsUniversalLawOfGravitationUserInput">
+            <!-- Gravitational constant -->
+            <label id="inputGravitationalConstant">Gravitational constant =
+               <input type="number" id="newtonsUniversalLawOfGravitationGravitationalConstant" />
+               x 10
+               <input type="number" id="newtonsUniversalLawOfGravitationGravitationalConstantApplyScientificNotation" />
+            </label>
+            <br>
+            <!-- Mass of object one -->
+            <label id="inputMassOne">Mass of object one =
+               <input type="number" id="newtonsUniversalLawOfGravitationMassOfObjectOne" />
+               x 10
+               <input type="number" id="newtonsUniversalLawOfGravitationMassOfObjectOneApplyScientificNotation" />
+            </label>
+            <br>
+            <!-- Mass of object two -->
+            <label id="inputMassTwo">Mass of object two =
+               <input type="number" id="newtonsUniversalLawOfGravitationMassOfObjectTwo" />
+               x 10
+               <input type="number" id="newtonsUniversalLawOfGravitationMassOfObjectTwoApplyScientificNotation" />
+            </label>
+            <br>
+            <!-- Mass of object two -->
+            <label id="inputDistanceBetweenObjects">Distance between object one & two =
+               <input type="number" id="newtonsUniversalLawOfGravitationDistanceBetweenTwoObjects" />
+               x 10
+               <input type="number"
+                  id="newtonsUniversalLawOfGravitationDistanceBetweenTwoObjectsApplyScientificNotation" />
+            </label>
+            <br>
+         </div>
+         <!-- Area where the user submits his or her provided data -->
+         <div id="newtonsUniversalLawOfGravitationSubmitDataArea">
+            <input id="newtonsUniversalLawOfGravitationSubmitButton" type="button" value="Submit">
+         </div>
+         <br>
+         <!-- Area where the user receives his or her result -->
+         <div id="newtonsUniversalLawOfGravitationResultArea">
+            <p id="newtonsUniversalLawOfGravitationResult"></p>
+         </div>
+         <br>
+      </fieldset>
+   </article>
+
+   <footer id="footer">
+      <div class="companyName" id="companyName">
+         Tyler Livingston 2020
+      </div>
+      <div class="versionNumber" id="versionNumber">
+         Version: 0.1.0
+      </div>
+   </footer>
+</body>
+
+</html>
