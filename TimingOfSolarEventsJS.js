@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 16, 2020
-// Updated: June 18, 2020
+// Updated: June 22, 2020
 // - Basic equation used in figuring out when
 //      events on the Sun will impact Earth.
 
@@ -50,5 +50,5 @@ const calculateEstimatedTimeOfImpact=function(){
     var numberOfDaysUntilImpact = (calculateTimeUntilImpactInSeconds / numberOfSecondsInOneDay);
     // console.log("Estimated days until impact: " + numberOfDaysUntilImpact.toFixed(1));
 
-    document.getElementById("timingOfSolarEventsResult").innerHTML="Number of day(s) until impact: " + numberOfDaysUntilImpact.toFixed(1);
+    document.getElementById("timingOfSolarEventsResult").innerHTML="<var>T</var> = " + numberOfDaysUntilImpact.toFixed(1) + " day(s)";
 }

@@ -4,7 +4,7 @@
     <!--
         Author: Tyler Livingston
         Start date: 5/20/2020
-        Updated: 6/11/2020
+        Updated: 6/22/2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
@@ -40,16 +40,22 @@
             <legend>
                 <h2>How long would it take to travel to another star system?</h2>
             </legend>
+            <!-- Description -->
             <p id="travelToAnotherStarSystemDescription">
                 This function will help you determine how long (in years) it would take you to travel
                 from Earth to another star system. For this calculation, you will need to know the
                 average speed (MPH or KM/H) of the spacecraft that would be used and the distance
                 (Lightyears) from Earth to desired star system.
             </p>
+            <!-- Notes -->
             <div id="travelToAnotherStarSystemDescriptionNotes">
                 <ul id="travelToAnotherStarSystemDescriptionNotesList">
-                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">Currently, the fastest manned spacecraft is, <a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html" target="_blank">N.A.S.A.'s Apollo 10 spacecraft</a>, which reached the top speed of 24,791 MPH (39,897 KM/P)</li>
-                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">The closest star system to Earth is Alpha Centauri, which is approximately 4.37 Light-years away.</li>
+                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">Currently, the fastest manned spacecraft
+                        is, <a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html"
+                            target="_blank">N.A.S.A.'s Apollo 10 spacecraft</a>, which reached the top speed of 24,791
+                        MPH (39,897 KM/P)</li>
+                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">The closest star system to Earth is Alpha
+                        Centauri, which is approximately 4.37 Light-years away.</li>
                 </ul>
             </div>
             <!-- Unit of measurement -->
@@ -80,6 +86,54 @@
                 <p id="travelToAnotherStarSystemResult"></p>
             </div>
             <br>
+        </fieldset>
+
+        <!-- Timing of Solar Events -->
+        <fieldset id="timingOfSolarEvents">
+            <legend>
+                <h2>The Timing of Solar Events</h2>
+            </legend>
+
+            <!-- Discription of equation -->
+            <p id="timingOfSolarEventsDescription">
+                This function will help you determine when events on the Sun will impact Earth. Common events
+                include...TODO [June 20, 2020]
+            </p>
+            <!-- Equation -->
+            <div id="timingOfSolarEventsEquation">
+                Equation: <var>T</var> = <var>D</var>/<var>v</var>
+                <br>
+                <!-- Equation variables -->
+                <div id="timingOfSolarEventsEquationVariables">
+                    Equation Variables:
+                    <br>
+                    <ul>
+                        <li><var>T</var> = Time (days)</li>
+                        <li><var>D</var> = Distance (Kilometers)</li>
+                        <li><var>v</var> = Velocity (Kilometers per Second)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Input equation varibles -->
+            <div id="timingOfSolarEventsInput">
+                <ul>
+                    <li><var>D</var> = <input type="number" id="timingOfSolarEventsDistanceToSun" /> x 10 <sup><input
+                                type="number"
+                                id="timingOfSolarEventsDistanceToSunApplyScientificNotation" /></sup>(Kilometers)</li>
+                    <li><var>v</var> = <input type="number" id="timingOfSolarEventsSpeedOfSolarWind" /> x 10 <sup><input
+                                type="number"
+                                id="timingOfSolarEventsSpeedOfSolarWindApplyScientificNotation" /></sup>(Kilometers per
+                        Second)</li>
+                </ul>
+            </div>
+            <!-- Input data -->
+            <div id=timingOfSolarEventsUserInput>
+                <input id="timingOfSolarEventsSubmitButton" type="button" value="Submit">
+            </div>
+            <!-- Equation results -->
+            <div id="timingOfSolarEventsResultArea">
+                <p id="timingOfSolarEventsResult"></p>
+            </div>
         </fieldset>
 
     </article>
