@@ -13,7 +13,7 @@
    <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
    <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
    <!-- JS -->
-   <script src="NewtonsUniversalLawOfGravitation.js"></script>
+   <script data-main="main" src="require.js"></script>
 </head>
 
 <body>
@@ -38,6 +38,7 @@
          <legend>
             <h2>Newton's Universal Law of Gravitation</h2>
          </legend>
+         <div id="description">Description:</div>
          <p id="newtonsUniversalLawOfGravitationDescription">
             Isaac Newton had concluded that the magnitude of the force of gravity
             must decrease with increasing distance between two objects
@@ -45,6 +46,7 @@
             square of their separation. To determine the gravitational attraction
             between any two objects, use the equation below.
          </p>
+         <div id="equation">Equation:</div>
          <div id="newtonsUniversalLawOfGravitationEquation">
             F gravity = G M1 * M2 / Rs
          </div>
@@ -62,7 +64,7 @@
                   objects one & two</li>
             </ul>
          </div>
-
+         <div id="userInput">Enter data:</div>
          <div id="newtonsUniversalLawOfGravitationUserInput">
             <!-- Gravitational constant -->
             <label id="inputGravitationalConstant">Gravitational constant =
@@ -105,14 +107,59 @@
          </div>
          <br>
       </fieldset>
+
+      <!-- Calculate Schwarzschild Radius -->
+      <fieldset id="sizeOfEventHorizon">
+         <legend>
+            <h2>Calculate a Black Hole's Schwarzschild Radius</h2>
+         </legend>
+         <div id="description">Description:</div>
+         <p id="sizeOfEventHorizonDescription">
+            The size of the event horizon of a black hole depends on the mass
+            of the black hole. The greater the mass, the larger the radius of
+            the event horizon. We can use the equation below to determine the
+            <a href="https://www.pbs.org/wgbh/nova/article/the-schwarzschild-radius-natures-breaking-point/"
+               target="_blank">Schwarzschild radius</a> of the event horizon.
+         </p>
+         <div id="equation">Equation:</div>
+         <div id="sizeOfEventHorizonEquation">
+            Rs = 2GM / c2
+         </div>
+         <div id="sizeOfEventHorizonDescriptionNotes">
+            <ul id="sizeOfEventHorizonDescriptionNotesList">
+               <li id="sizeOfEventHorizonDescriptionNotesListItem"><i>R s</i> - Schwarzschild radius
+               </li>
+               <li id="sizeOfEventHorizonDescriptionNotesListItem"><i>G</i> - Gravitational constant
+               </li>
+               <li id="sizeOfEventHorizonDescriptionNotesListItem"><i>M</i> - Mass of black hole (solar mass(es))
+               </li>
+               <li id="sizeOfEventHorizonDescriptionNotesListItem"><i>M2</i> - Speed of light
+               </li>
+            </ul>
+         </div>
+         <div id="userInput">Enter data:</div>
+         <label id="inputMassForSizeOfEventHorizon">Mass of black hole (solar mass(es)) =
+            <input type="number" id="sizeOfEventHorizonDesiredSolarMass" />
+            x 10
+            <input type="number" id="sizeOfEventHorizonDesiredSolarMassApplyScientificNotation" />
+         </label>
+         <!-- Area where the user submits his or her provided data -->
+         <div id="sizeOfEventHorizonSubmitDataArea">
+            <input id="sizeOfEventHorizonSubmitButton" type="button" value="Submit">
+         </div>
+         <br>
+         <!-- Area where the user receives his or her result -->
+         <div id="sizeOfEventHorizonResultArea">
+            <p id="sizeOfEventHorizonResult"></p>
+         </div>
+      </fieldset>
+
    </article>
 
    <footer id="footer">
       <div class="companyName" id="companyName">
-         Tyler Livingston 2020
       </div>
       <div class="versionNumber" id="versionNumber">
-         Version: 0.1.0
       </div>
    </footer>
 </body>

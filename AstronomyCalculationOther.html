@@ -3,8 +3,8 @@
 <head>
     <!--
         Author: Tyler Livingston
-        Start date: 6/15/2020
-        Updated: 6/15/2020
+        Start date: June 25, 2020
+        Updated: June 25, 2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
@@ -13,7 +13,7 @@
     <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
     <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
     <!-- JS -->
-     
+    <script data-main="main" src="require.js"></script>
 </head>
 
 <body>
@@ -34,7 +34,77 @@
     <article>
         <h1>Astronomy Calculator - Other</h1>
         <br><br>
-        
+        <!-- Light Gathering Ability -->
+        <fieldset id="lightGatheringAbility">
+            <legend>
+                <h2>Light Gathering Ability</h2>
+            </legend>
+            <div id="description">Description:</div>
+            <p id="lightGatheringAbilityDescription">
+                Light Gathering Ability is the property of
+                an optical system that tells you how much brighter
+                things will appear than what the human eye can
+                see.
+            </p>
+            <div id="equation">Equation:</div>
+            <div id="lightGatheringAbilityEquation">
+                LGA = (d1/d2)2
+            </div>
+            <div id="lightGatheringAbilityDescriptionNotes">
+                <ul id="lightGatheringAbilityDescriptionNotesList">
+                    <li id="lightGatheringAbilityDescriptionNotesListItem"><i>LGA</i> - Light Gathering Ability
+                    </li>
+                    <li id="lightGatheringAbilityDescriptionNotesListItem"><i>d1</i> - Diameter of object one
+                    </li>
+                    <li id="lightGatheringAbilityDescriptionNotesListItem"><i>d2</i> - Diameter of object two
+                    </li>
+                </ul>
+            </div>
+            <div id="userInput">Enter data:</div>
+            <label id="inputDiameterForlightGatheringAbility">Diameter of object one (mm) =
+                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectOne" />
+            </label>
+            <br>
+            <label id="inputDiameterForlightGatheringAbility">Diameter of object two (mm) =
+                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectTwo" />
+            </label>
+            <!-- Area where the user submits his or her provided data -->
+            <div id="lightGatheringAbilitySubmitDataArea">
+                <input id="lightGatheringAbilitySubmitButton" type="button" value="Submit">
+            </div>
+            <br>
+            <!-- Area where the user receives his or her result -->
+            <div id="lightGatheringAbilityResultArea">
+                <p id="lightGatheringAbilityResult"></p>
+            </div>
+        </fieldset>
+
+        <!-- Length in Time for Radio Communication -->
+        <fieldset id="waitTimeForRadioCommunication">
+            <legend>
+                <h2>Wait Time for Radio Communication</h2>
+            </legend>
+            <div id="description">Description:</div>
+            <p id="waitTimeForRadioCommunicationDescription">
+                This equation will help determine how long it would take for a radio signal, sent from Earth, 
+                to be sent to a distance object (such as Earth’s moon).
+            </p>
+            <div id="userInput">Enter data:</div>
+            <label id="inputDistanceWaitTimeForRadioCommunication">Distance from Earth =
+                <input type="number" id="waitTimeForRadioCommunicationDistance" /> (km)
+            </label>
+            <br>
+            <!-- Area where the user submits his or her provided data -->
+            <div id="waitTimeForRadioCommunicationSubmitDataArea">
+                <input id="waitTimeForRadioCommunicationSubmitButton" type="button" value="Submit">
+            </div>
+            <br>
+            <!-- Area where the user receives his or her result -->
+            <div id="waitTimeForRadioCommunicationResultArea">
+                <p id="waitTimeForRadioCommunicationResult"></p>
+            </div>
+        </fieldset>
+
     </article>
 
     <footer id="footer">

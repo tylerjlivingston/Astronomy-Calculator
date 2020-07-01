@@ -13,8 +13,7 @@
     <link href="Astronomy Calculations CSS Reset.css" rel="stylesheet" />
     <link href="Astronomy Calculations CSS Style 1.css" rel="stylesheet" />
     <!-- JS -->
-    <script src="AstronomyCalculationTravelToAnotherStarSystemJS.js"></script>
-    <script src="TimingOfSolarEventsJS.js"></script>
+    <script data-main="main" src="require.js"></script>
 </head>
 
 <body>
@@ -41,6 +40,7 @@
                 <h2>How long would it take to travel to another star system?</h2>
             </legend>
             <!-- Description -->
+            <div id="description">Description:</div>
             <p id="travelToAnotherStarSystemDescription">
                 This function will help you determine how long (in years) it would take you to travel
                 from Earth to another star system. For this calculation, you will need to know the
@@ -49,6 +49,7 @@
             </p>
             <!-- Notes -->
             <div id="travelToAnotherStarSystemDescriptionNotes">
+                <div id="notes">Note:</div>
                 <ul id="travelToAnotherStarSystemDescriptionNotesList">
                     <li id="travelToAnotherStarSystemDescriptionNotesListItem">Currently, the fastest manned spacecraft
                         is, <a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html"
@@ -59,6 +60,7 @@
                 </ul>
             </div>
             <!-- Unit of measurement -->
+            <div id="userInput">Enter data:</div>
             <label for="selectUnit">Unit of measurement:
                 <select id="travelToAnotherStarSystemUnit">
                     <option value="Metric" selected>Metric (KM/H)</option>
@@ -93,15 +95,18 @@
             <legend>
                 <h2>The Timing of Solar Events</h2>
             </legend>
-
+            <div id="description">Description:</div>
             <!-- Discription of equation -->
             <p id="timingOfSolarEventsDescription">
                 This function will help you determine when events on the Sun will impact Earth. Common events
-                include...TODO [June 20, 2020]
+                include coronal mass ejections (CMEs) & solar flares. For more information regarding solar events,
+                visit <a href="https://www.nasa.gov/mission_pages/sunearth/index.html"
+                target="_blank">here</a>.
             </p>
+            <div id="equation">Equation:</div>
             <!-- Equation -->
             <div id="timingOfSolarEventsEquation">
-                Equation: <var>T</var> = <var>D</var>/<var>v</var>
+                <var>T</var> = <var>D</var>/<var>v</var>
                 <br>
                 <!-- Equation variables -->
                 <div id="timingOfSolarEventsEquationVariables">
@@ -114,6 +119,7 @@
                     </ul>
                 </div>
             </div>
+            <div id="userInput">Enter data:</div>
             <!-- Input equation varibles -->
             <div id="timingOfSolarEventsInput">
                 <ul>
@@ -140,10 +146,8 @@
 
     <footer id="footer">
         <div class="companyName" id="companyName">
-            Tyler Livingston 2020
         </div>
         <div class="versionNumber" id="versionNumber">
-            Version: 0.1.0
         </div>
     </footer>
 </body>
