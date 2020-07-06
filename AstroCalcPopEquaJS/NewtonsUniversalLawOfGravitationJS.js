@@ -5,9 +5,14 @@
 //     between two objects.
 
 define([], function() {
+    document.getElementById("newtonsUniversalLawOfGravitationResult").innerHTML="Please enter data in all required feilds.";
     var mb = document.getElementById("newtonsUniversalLawOfGravitationSubmitButton");
     mb.addEventListener("click", calculateGravitationalForce);
 });
+
+function gravitationalForceErrorMessage(data) {
+    alert("Please fill the out the '" + data + "' feild for calculating 'Gravitational Force'.");
+}
 
 const getMassOfObjectOne=function() {
     var mass = null;
@@ -20,7 +25,11 @@ const getMassOfObjectOne=function() {
         mass = massTemp;
         // console.log("Desired mass one: " + mass);
     }
-    return mass;
+    if (mass == "") {
+        gravitationalForceErrorMessage("Mass of Object One");
+    } else {
+        return mass;
+    }
 }
 
 const getMassOfObjectTwo=function() {
@@ -34,7 +43,11 @@ const getMassOfObjectTwo=function() {
         mass = massTemp;
         // console.log("Desired mass two: " + mass);
     }
-    return mass;
+    if (mass == "") {
+        gravitationalForceErrorMessage("Mass of Object Two");
+    } else {
+        return mass;
+    }
 }
 
 const getGravitationalConstant=function() {
@@ -48,7 +61,11 @@ const getGravitationalConstant=function() {
         gravitationalConstant = gravitationalConstantTemp;
         // console.log("Desired gravitational constant: " + gravitationalConstant);
     }
-    return gravitationalConstant;
+    if (gravitationalConstant == "") {
+        gravitationalForceErrorMessage("Gravitational Constant");
+    } else {
+        return gravitationalConstant;
+    }
 }
 
 const getDistanceBetweenTwoObjects=function() {
@@ -62,7 +79,11 @@ const getDistanceBetweenTwoObjects=function() {
         distanceBetweenTwoObjects = distanceBetweenTwoObjectsTemp;
         // console.log("Desired distance between two objects: " + distanceBetweenTwoObjects);
     }
-    return distanceBetweenTwoObjects;
+    if (distanceBetweenTwoObjects == "") {
+        gravitationalForceErrorMessage("Distance Between Two Objects");
+    } else {
+        return distanceBetweenTwoObjects;
+    }
 }
 
 const calculateGravitationalForce=function(){
@@ -76,5 +97,5 @@ const calculateGravitationalForce=function(){
     // console.log("denominator:" + denominator);
     var gravitationalForce = (numerator/denominator);
     // console.log("gravitationalForce: " + gravitationalForce);
-    document.getElementById("newtonsUniversalLawOfGravitationResult").innerHTML="Gravitational Force = " + gravitationalForce.toLocaleString();
+    document.getElementById("newtonsUniversalLawOfGravitationResult").innerHTML="Gravitational Force = <strong>" + gravitationalForce.toLocaleString() + "</strong>";
 }

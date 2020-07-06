@@ -4,44 +4,54 @@
 // - Basic equation used in figuring out when
 //      events on the Sun will impact Earth.
 
-define([], function() {
+define([], function () {
+    document.getElementById("timingOfSolarEventsResult").innerHTML = "Please enter data in all required feilds.";
     var mb = document.getElementById("timingOfSolarEventsSubmitButton");
     mb.addEventListener("click", calculateEstimatedTimeOfImpact);
 });
 
-const getDistanceToSun=function() {
+const getDistanceToSun = function () {
     var distance = null;
     var distanceTemp = document.getElementById("timingOfSolarEventsDistanceToSun").value;
     var power = document.getElementById("timingOfSolarEventsDistanceToSunApplyScientificNotation").value;
     if (power != "") {
         distance = distanceTemp * Math.pow(10, power);
         // console.log("Calculated distance: " + distance);
-    }else{
+    } else {
         distance = distanceTemp;
         // console.log("Desired distance: " + distance);
     }
-    return distance;
+    if (distance == null) {
+        alert("Please enter a valid input for the distance from the sun.")
+    } else {
+        return distance;
+    }
 }
 
-const getSpeedOfSolarWind=function() {
+const getSpeedOfSolarWind = function () {
     var speed = null;
     var speedTemp = document.getElementById("timingOfSolarEventsSpeedOfSolarWind").value;
     var power = document.getElementById("timingOfSolarEventsSpeedOfSolarWindApplyScientificNotation").value;
     if (power != "") {
         speed = speedTemp * Math.pow(10, power);
         // console.log("Calculated speed: " + speed);
-    }else{
+    } else {
         speed = speedTemp;
         // console.log("Desired distance: " + speed);
+    }
+    if (speed == null) {
+        alert("Please enter a valid input for the speed of a solar event.")
+    } else {
+        
     }
     return speed;
 }
 
-const calculateEstimatedTimeOfImpact=function(){
+const calculateEstimatedTimeOfImpact = function () {
     var distance = getDistanceToSun.call();
     var speed = getSpeedOfSolarWind.call();
 
-    var calculateTimeUntilImpactInSeconds = (distance/speed);
+    var calculateTimeUntilImpactInSeconds = (distance / speed);
     // console.log("Calculated time in seconds: " + calculateTimeInSeconds);
 
     var numberOfSecondsInOneDay = (60 * 60 * 24);
@@ -50,5 +60,5 @@ const calculateEstimatedTimeOfImpact=function(){
     var numberOfDaysUntilImpact = (calculateTimeUntilImpactInSeconds / numberOfSecondsInOneDay);
     // console.log("Estimated days until impact: " + numberOfDaysUntilImpact);
 
-    document.getElementById("timingOfSolarEventsResult").innerHTML="<var>T</var> = " + numberOfDaysUntilImpact + " day(s)";
+    document.getElementById("timingOfSolarEventsResult").innerHTML = "<var>T</var> = <strong>" + numberOfDaysUntilImpact.toFixed(2) + " day(s) </strong>";
 }

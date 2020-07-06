@@ -5,53 +5,70 @@
 //     it would take to travel to another 
 //     star system, from Earth.
 
-define([], function() {
+define([], function () {
+    document.getElementById("travelToAnotherStarSystemResult").innerHTML = "Please enter data in all required feilds."
     var mb = document.getElementById("travelToAnotherStarSystemSubmitButton");
     mb.addEventListener("click", provideAnswer);
 });
 
-const provideAnswer=function() {
+const provideAnswer = function () {
     if (document.getElementById("travelToAnotherStarSystemUnit").value == "Metric") {
         // console.log("Selected unit was Metric");
-        amountOfTimeInMetric.call();
+        calculateTimeToStarSystem("Metric");
     } else {
         // console.log("Selected unit was Standard");
-        amountOfTimeInStandard.call();
+        calculateTimeToStarSystem("Standard");
     }
 }
 
-const getDistanceToOtherStarSystemInLightyears = function(){
-    return document.getElementById("travelToAnotherStarSystemDistance").value; //Get the distance to the other planet in lightyears
+const getDistanceToOtherStarSystemInLightyears = function () {
+    var distance = document.getElementById("travelToAnotherStarSystemDistance").value; //Get the distance to the other planet in lightyears
+    if (distance == "") {
+        alert("Please enter a valid input for the distance to another star system.");
+    } else {
+        return distance;
+    }
 }
 
-const getSpeedOfSpacecraft = function(){
-    return document.getElementById("travelToAnotherStarSystemSpeedOfSpacecraft").value; //Get speed of spacecraft
+const getSpeedOfSpacecraft = function () {
+    var speed = document.getElementById("travelToAnotherStarSystemSpeedOfSpacecraft").value; //Get speed of spacecraft
+    if (speed == "") {
+        alert("Please enter a valid input for the speed of a spacecraft.");
+    } else {
+        return speed;
+    }
 }
 
-const getLightyearInMiles = function(){
+const getLightyearInMiles = function () {
     return 5.879 * Math.pow(10, 12); //miles
 }
 
-const getLightyearInKilometers = function(){
+const getLightyearInKilometers = function () {
     return 9.461 * Math.pow(10, 12); //kilometers
 }
 
-const getNumberOfHoursInOneYear = function(){
+const getNumberOfHoursInOneYear = function () {
     return 8760; //hours
 }
 
-const amountOfTimeInStandard = function(){
-    var hoursPerLightYearStandard = (getLightyearInMiles.call() / getSpeedOfSpacecraft.call());
-    var yearsToTravelOneLightYearAtSpacecraftsTopSpeedInStandard = (hoursPerLightYearStandard / getNumberOfHoursInOneYear.call());
-    var amountOfTimeInStandard = Math.round((getDistanceToOtherStarSystemInLightyears.call() * yearsToTravelOneLightYearAtSpacecraftsTopSpeedInStandard));
-    // console.log("The amount of time it would take to travel to another palnet at the speed of " + getSpeedOfSpacecraft.call() + " MPH would be about " + amountOfTimeInStandard + " years.");
-    document.getElementById("travelToAnotherStarSystemResult").innerHTML="It will take you about " + amountOfTimeInStandard.toLocaleString() + " year(s) to travel, at the speed of " + getSpeedOfSpacecraft.call().toLocaleString() + " MPH, to a star system that is " + getDistanceToOtherStarSystemInLightyears.call() + " Lightyears away.";
-}
+function calculateTimeToStarSystem(unit) {
+    var speedLabel = "";
+    var speedOfSpacecraft = getSpeedOfSpacecraft.call();
+    var distanceToStarSystem = getDistanceToOtherStarSystemInLightyears.call();
+    var numberOfHoursInOneYear = getNumberOfHoursInOneYear.call();
+    var lightyearInDesiredUnit = ""; // Will be set based on user input
 
-const amountOfTimeInMetric = function(){
-    var hoursPerLightYearMetric = (getLightyearInKilometers.call() / getSpeedOfSpacecraft.call());
-    var yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric = (hoursPerLightYearMetric / getNumberOfHoursInOneYear.call());
-    var amountOfTimeInMetric = Math.round((getDistanceToOtherStarSystemInLightyears.call() * yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric));
-    // console.log("The amount of time it would take to travel to another palnet at the speed of " + getSpeedOfSpacecraft.call() + " KM/H would be about " + amountOfTimeInMetric + " years.");
-    document.getElementById("travelToAnotherStarSystemResult").innerHTML="It will take you about " + amountOfTimeInMetric.toLocaleString() + " year(s) to travel, at the speed of " + getSpeedOfSpacecraft.call().toLocaleString() + " KM/H, to a star system that is " + getDistanceToOtherStarSystemInLightyears.call() + " Lightyears away.";
+    if (unit == "Metric") {
+        lightyearInDesiredUnit = getLightyearInKilometers.call();
+        speedLabel = "KM/H";
+    } else {
+        lightyearInDesiredUnit = getLightyearInMiles.call();
+        speedLabel = "MPH";
+    }
+    
+    var hoursPerLightYear = (lightyearInDesiredUnit / speedOfSpacecraft);
+    var yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric = (hoursPerLightYear / numberOfHoursInOneYear);
+    var amountOfTime = Math.round((distanceToStarSystem * yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric));
+    // console.log("Amount of time to travel: + amountOfTime);
+    document.getElementById("travelToAnotherStarSystemResult").innerHTML ="It will take you about <strong>" + parseInt(amountOfTime).toLocaleString() + " year(s)</strong> to travel, at the speed of " + parseInt(speedOfSpacecraft).toLocaleString() + " " + speedLabel + ", to a star system that is " + distanceToStarSystem + " Light-years away.";
 }

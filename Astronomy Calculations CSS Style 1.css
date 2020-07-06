@@ -3,7 +3,7 @@
         /* Author: Tyler Livingston
         Start date: 6/1/2020
         Updated: 6/1/2020
-        Purpose: To calculate common equations related to astronomy */
+		Purpose: To calculate common equations related to astronomy */
 
 html {
    background-color: rgb(12, 36, 59);
@@ -31,6 +31,8 @@ body > header > nav#topLinks {
 	text-align: right;
 	padding: 5px 10px 5px 0px;
 }
+
+/* Navigation */
 
 nav#topLinks a:link, nav#topLinks a:visited {
 	color: white;
@@ -71,28 +73,51 @@ article {
    width: 90%;
    margin: 10px auto;
    padding: 10px 20px;
+   line-height: 1.7;
 }
 
 article h1 {
 	font-family: Baskerville, "Palatino Linotype", Palatino, 
 	             "Century Schoolbook", "Times New Roman", serif;
 	font-size: 2.5em;
-	color: rgb(0, 0, 0);	
+	color: rgb(0, 0, 0);		
 	text-align: center;	
 }
 
-article p {
+article #calculationHeader {
+	font-family: Baskerville, "Palatino Linotype", Palatino, 
+	             "Century Schoolbook", "Times New Roman", serif;
+	font-size: 1.5em;
+	color: rgb(0, 0, 0);		
+	text-align: center;	
+}
+
+#calculation {
+	border: 2px solid;
+	border-radius: 5px;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 20px;
+}
+
+article p, #websiteOverview, #websitesOfInterest, #sources {
 	clear: both;
     margin-bottom: 20px;	
-	text-align: center;
+	text-align: left;
 }
 
-article > p#websiteOverviewText {
-    text-align: left;
+article #description, #notes, #userInputLabel, #equation, #equationVariablesLabel, #submitDataAreaLabel, #resultLabel {
+	margin-top: 20px;
+	font-weight: bold;
 }
 
-article > ul#LinksForWebsitesOfInterest {
-    padding-left: 2.5em;
+article #input {
+	word-wrap: break-word;
+}
+
+article ul {
+	padding-left: 2em;
+	padding-right: 1em;
 }
 
 article::after {
@@ -101,13 +126,25 @@ article::after {
    display: table;
 }
 
-fieldset#travelToAnotherStarSystem > p#selectUnit, p#inputSpeed, p#inputDistance{
-	text-align: left;
-}
+/* Fractions */
 
-fieldset#travelToAnotherStarSystem > input{
-	float: right;
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
 }
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+} 
 
 /* Footer Styles */
 footer {

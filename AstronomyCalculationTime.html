@@ -31,117 +31,115 @@
     </header>
 
     <article>
-        <h1>Astronomy Calculator - Time</h1>
+        <h1>Time</h1>
         <br>
 
         <!-- Traveling to another star system -->
-        <fieldset id="travelToAnotherStarSystem">
-            <legend>
-                <h2>How long would it take to travel to another star system?</h2>
-            </legend>
+        <div id="calculation">
+            <h2 id="calculationHeader">How long would it take to travel to another star system?</h2>
             <!-- Description -->
             <div id="description">Description:</div>
-            <p id="travelToAnotherStarSystemDescription">
+            <div id="travelToAnotherStarSystemDescription">
                 This function will help you determine how long (in years) it would take you to travel
                 from Earth to another star system. For this calculation, you will need to know the
                 average speed (MPH or KM/H) of the spacecraft that would be used and the distance
-                (Lightyears) from Earth to desired star system.
-            </p>
+                (Light-years) from Earth to desired star system.
+            </div>
             <!-- Notes -->
             <div id="travelToAnotherStarSystemDescriptionNotes">
                 <div id="notes">Note:</div>
                 <ul id="travelToAnotherStarSystemDescriptionNotesList">
-                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">Currently, the fastest manned spacecraft
+                    <li>Currently, the fastest manned spacecraft
                         is, <a href="https://www.nasa.gov/mission_pages/apollo/missions/apollo10.html"
-                            target="_blank">N.A.S.A.'s Apollo 10 spacecraft</a>, which reached the top speed of 24,791
-                        MPH (39,897 KM/P)</li>
-                    <li id="travelToAnotherStarSystemDescriptionNotesListItem">The closest star system to Earth is Alpha
+                            target="_blank">N.A.S.A.'s Apollo 10 spacecraft</a>, which reached the top speed of 39,897
+                        KM/P (24,791
+                        MPH)</li>
+                    <li>The closest star system to Earth is Alpha
                         Centauri, which is approximately 4.37 Light-years away.</li>
                 </ul>
             </div>
             <!-- Unit of measurement -->
-            <div id="userInput">Enter data:</div>
-            <label for="selectUnit">Unit of measurement:
+            <div id="userInputLabel">Enter Data:</div>
+            <div id="input" for="input">Unit of measurement:
                 <select id="travelToAnotherStarSystemUnit">
                     <option value="Metric" selected>Metric (KM/H)</option>
                     <option value="Standard">Standard (MPH)</option>
                 </select>
-            </label>
-            <br>
-            <!-- Distance (In light-years) -->
-            <label id="inputDistance">Estimated distance (Light-year(s)):
-                <input type="number" id="travelToAnotherStarSystemDistance" />
-            </label>
-            <br>
+            </div>
             <!-- Speed of spacecraft -->
-            <label id="inputSpeed">Speed of spacecraft:
+            <div id="input">Speed of spacecraft:
                 <input type="number" id="travelToAnotherStarSystemSpeedOfSpacecraft" />
-            </label>
-            <br>
-            <!-- Area where the user submits his or her provided data -->
-            <div id=travelToAnotherStarSystemSubmitDataArea>
+                (Unit)
+            </div>
+            <!-- Distance (In light-years) -->
+            <div id="input">Estimated distance:
+                <input type="number" id="travelToAnotherStarSystemDistance" />
+                (Light-year(s))
+            </div>
+            <!-- Input data -->
+            <div id=submitDataArea>
+                <div id=submitDataAreaLabel>Submit Data:</div>
                 <input id="travelToAnotherStarSystemSubmitButton" type="button" value="Submit">
             </div>
-            <br>
-            <!-- Area where the user receives his or her result -->
+            <!-- Equation results -->
             <div id="travelToAnotherStarSystemResultArea">
-                <p id="travelToAnotherStarSystemResult"></p>
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="travelToAnotherStarSystemResult"></div>
             </div>
-            <br>
-        </fieldset>
+        </div>
 
         <!-- Timing of Solar Events -->
-        <fieldset id="timingOfSolarEvents">
-            <legend>
-                <h2>The Timing of Solar Events</h2>
-            </legend>
+        <div id="calculation">
+            <h2 id="calculationHeader">The Timing of Solar Events</h2>
             <div id="description">Description:</div>
             <!-- Discription of equation -->
-            <p id="timingOfSolarEventsDescription">
+            <div id="timingOfSolarEventsDescription">
                 This function will help you determine when events on the Sun will impact Earth. Common events
                 include coronal mass ejections (CMEs) & solar flares. For more information regarding solar events,
-                visit <a href="https://www.nasa.gov/mission_pages/sunearth/index.html"
-                target="_blank">here</a>.
-            </p>
+                visit <a href="https://www.nasa.gov/mission_pages/sunearth/index.html" target="_blank">here</a>.
+            </div>
             <div id="equation">Equation:</div>
             <!-- Equation -->
             <div id="timingOfSolarEventsEquation">
-                <var>T</var> = <var>D</var>/<var>v</var>
-                <br>
+                T = <div class="frac">
+                    <span>D</span>
+                    <span class="symbol">/</span>
+                    <span class="bottom">v</span>
+                 </div>
                 <!-- Equation variables -->
-                <div id="timingOfSolarEventsEquationVariables">
-                    Equation Variables:
-                    <br>
-                    <ul>
-                        <li><var>T</var> = Time (days)</li>
-                        <li><var>D</var> = Distance (Kilometers)</li>
-                        <li><var>v</var> = Velocity (Kilometers per Second)</li>
-                    </ul>
+                <div id="equationVariables">
+                    <div id="equationVariablesLabel">Equation Variables:</div>
+                <ul>
+                    <li><var>T</var> = Time (days)</li>
+                    <li><var>D</var> = Distance (Kilometers)</li>
+                    <li><var>v</var> = Velocity (Kilometers per Second)</li>
+                </ul>
                 </div>
             </div>
-            <div id="userInput">Enter data:</div>
+            <div id="userInputLabel">Enter Data:</div>
             <!-- Input equation varibles -->
             <div id="timingOfSolarEventsInput">
                 <ul>
                     <li><var>D</var> = <input type="number" id="timingOfSolarEventsDistanceToSun" /> x 10 <sup><input
-                                type="number"
-                                id="timingOfSolarEventsDistanceToSunApplyScientificNotation" /></sup>(Kilometers)</li>
+                                type="number" id="timingOfSolarEventsDistanceToSunApplyScientificNotation" /></sup>
+                        (Kilometers)</li>
                     <li><var>v</var> = <input type="number" id="timingOfSolarEventsSpeedOfSolarWind" /> x 10 <sup><input
-                                type="number"
-                                id="timingOfSolarEventsSpeedOfSolarWindApplyScientificNotation" /></sup>(Kilometers per
+                                type="number" id="timingOfSolarEventsSpeedOfSolarWindApplyScientificNotation" /></sup>
+                        (Kilometers per
                         Second)</li>
                 </ul>
             </div>
             <!-- Input data -->
-            <div id=timingOfSolarEventsUserInput>
+            <div id=submitDataArea>
+                <div id=submitDataAreaLabel>Submit Data:</div>
                 <input id="timingOfSolarEventsSubmitButton" type="button" value="Submit">
             </div>
             <!-- Equation results -->
             <div id="timingOfSolarEventsResultArea">
-                <p id="timingOfSolarEventsResult"></p>
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="timingOfSolarEventsResult"></div>
             </div>
-        </fieldset>
-
+        </div>
     </article>
 
     <footer id="footer">

@@ -4,7 +4,7 @@
     <!--
         Author: Tyler Livingston
         Start date: June 25, 2020
-        Updated: June 25, 2020
+        Updated: July 1, 2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
@@ -32,23 +32,21 @@
     </header>
 
     <article>
-        <h1>Astronomy Calculator - Other</h1>
-        <br><br>
+        <h1>Other</h1>
         <!-- Light Gathering Ability -->
-        <fieldset id="lightGatheringAbility">
-            <legend>
-                <h2>Light Gathering Ability</h2>
-            </legend>
+        <div id="calculation">
+                <h2 id="calculationHeader">Light Gathering Ability</h2>
             <div id="description">Description:</div>
-            <p id="lightGatheringAbilityDescription">
+            <div id="lightGatheringAbilityDescription">
                 Light Gathering Ability is the property of
                 an optical system that tells you how much brighter
                 things will appear than what the human eye can
-                see.
-            </p>
+                see. This calculation will determine how much 
+                more light one object gathers compared to another object.
+            </div>
             <div id="equation">Equation:</div>
             <div id="lightGatheringAbilityEquation">
-                LGA = (d1/d2)2
+                LGA = (d1/d2)<sup>2</sup>
             </div>
             <div id="lightGatheringAbilityDescriptionNotes">
                 <ul id="lightGatheringAbilityDescriptionNotesList">
@@ -60,59 +58,58 @@
                     </li>
                 </ul>
             </div>
-            <div id="userInput">Enter data:</div>
-            <label id="inputDiameterForlightGatheringAbility">Diameter of object one (mm) =
-                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectOne" />
+            <!-- Receive user input -->
+            <div id="userInputLabel">Enter Data:</div>
+            <label id="inputDiameterForlightGatheringAbility">Diameter of object one =
+                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectOne" required/> (mm)
             </label>
             <br>
-            <label id="inputDiameterForlightGatheringAbility">Diameter of object two (mm) =
-                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectTwo" />
+            <label id="inputDiameterForlightGatheringAbility">Diameter of object two =
+                <input type="number" id="lightGatheringAbilityLensDiameterOfObjectTwo" required/> (mm)
             </label>
-            <!-- Area where the user submits his or her provided data -->
-            <div id="lightGatheringAbilitySubmitDataArea">
+            <!-- Input data -->
+            <div id=submitDataArea>
+                <div id=submitDataAreaLabel>Submit Data:</div>
                 <input id="lightGatheringAbilitySubmitButton" type="button" value="Submit">
             </div>
-            <br>
-            <!-- Area where the user receives his or her result -->
+            <!-- Equation results -->
             <div id="lightGatheringAbilityResultArea">
-                <p id="lightGatheringAbilityResult"></p>
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="lightGatheringAbilityResult"></div>
             </div>
-        </fieldset>
+        </div>
 
         <!-- Length in Time for Radio Communication -->
-        <fieldset id="waitTimeForRadioCommunication">
-            <legend>
-                <h2>Wait Time for Radio Communication</h2>
-            </legend>
+        <div id="calculation">
+                <h2 id="calculationHeader">Wait Time for Radio Communication</h2>
             <div id="description">Description:</div>
-            <p id="waitTimeForRadioCommunicationDescription">
-                This equation will help determine how long it would take for a radio signal, sent from Earth, 
+            <div id="waitTimeForRadioCommunicationDescription">
+                This equation will help determine how long it would take for a radio signal, sent from Earth,
                 to be sent to a distance object (such as Earth’s moon).
-            </p>
-            <div id="userInput">Enter data:</div>
+            </div>
+            <!-- Receive user input -->
+            <div id="userInputLabel">Enter Data:</div>
             <label id="inputDistanceWaitTimeForRadioCommunication">Distance from Earth =
-                <input type="number" id="waitTimeForRadioCommunicationDistance" /> (km)
+                <input type="number" id="waitTimeForRadioCommunicationDistance" required/> (km)
             </label>
-            <br>
-            <!-- Area where the user submits his or her provided data -->
-            <div id="waitTimeForRadioCommunicationSubmitDataArea">
+            <!-- Submit data -->
+            <div id=submitDataArea>
+                <div id=submitDataAreaLabel>Submit Data:</div>
                 <input id="waitTimeForRadioCommunicationSubmitButton" type="button" value="Submit">
             </div>
-            <br>
-            <!-- Area where the user receives his or her result -->
-            <div id="waitTimeForRadioCommunicationResultArea">
-                <p id="waitTimeForRadioCommunicationResult"></p>
+            <!-- Equation results -->
+            <div id="lightGatheringAbilityResultArea">
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="waitTimeForRadioCommunicationResult"></div>
             </div>
-        </fieldset>
+        </div>
 
     </article>
 
     <footer id="footer">
         <div class="companyName" id="companyName">
-            Tyler Livingston 2020
         </div>
         <div class="versionNumber" id="versionNumber">
-            Version: 0.1.0
         </div>
     </footer>
 

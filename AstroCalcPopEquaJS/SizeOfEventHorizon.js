@@ -4,6 +4,7 @@
 // - Will calculate wavelength
 
 define([], function() {
+    document.getElementById("sizeOfEventHorizonResult").innerHTML="Please enter data in the required feild.";
     var mb = document.getElementById("sizeOfEventHorizonSubmitButton");
     mb.addEventListener("click", calculate);
 });
@@ -19,7 +20,11 @@ const getDesiredSolarMass = function () {
         mass = massTemp;
         console.log("Desired mass: " + mass);
     }
-    return mass;
+    if (mass == "") {
+        alert("Please enter a valid input for the mass of a black hole.");
+    } else {
+        return mass;
+    }
 }
 
 function calculate() {
@@ -29,7 +34,7 @@ function calculate() {
     var speedOfLightSquared = Math.pow((3 * Math.pow(10,8)), 2);
     var schrwazchildRadius = (2 * gravitationalConstant * calculateSolarMass) / speedOfLightSquared;
     console.log("Schrwazchild Radius: " + schrwazchildRadius);
-    document.getElementById("sizeOfEventHorizonResult").innerHTML="<var>Rs</var> = " + schrwazchildRadius;
+    document.getElementById("sizeOfEventHorizonResult").innerHTML="<var>Rs</var> = <strong>" + schrwazchildRadius.toLocaleString() + "</strong>";
 }
 
 
