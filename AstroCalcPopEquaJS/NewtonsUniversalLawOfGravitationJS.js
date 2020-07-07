@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 16, 2020
-// Updated: June 16, 2020
+// Updated: July 6, 2020
 // - Will calculate the gravitational force
 //     between two objects.
 

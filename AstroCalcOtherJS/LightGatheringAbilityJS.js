@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 29, 2020
-// Updated: July 1, 2020
+// Updated: July 6, 2020
 // - This file will compare two lens diameters
 //   and calculate the difference between the two.
 

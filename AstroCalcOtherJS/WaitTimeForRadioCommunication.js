@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 29, 2020
-// Updated: June 29, 2020
+// Updated: July 6, 2020
 // - This file will calculate how long it would take to for 
 // a radio broadcast to reach a distant object, from Earth.
 

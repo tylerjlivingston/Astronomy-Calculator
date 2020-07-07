@@ -3,8 +3,8 @@
 <head>
     <!--
         Author: Tyler Livingston
-        Start date: 5/20/2020
-        Updated: 6/22/2020
+        Start date: April 20, 2020
+        Updated: July 6, 2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
@@ -68,12 +68,12 @@
             </div>
             <!-- Speed of spacecraft -->
             <div id="input">Speed of spacecraft:
-                <input type="number" id="travelToAnotherStarSystemSpeedOfSpacecraft" />
+                <input type="number" id="travelToAnotherStarSystemSpeedOfSpacecraft" required/>
                 (Unit)
             </div>
             <!-- Distance (In light-years) -->
             <div id="input">Estimated distance:
-                <input type="number" id="travelToAnotherStarSystemDistance" />
+                <input type="number" id="travelToAnotherStarSystemDistance" required/>
                 (Light-year(s))
             </div>
             <!-- Input data -->
@@ -110,7 +110,7 @@
                 <div id="equationVariables">
                     <div id="equationVariablesLabel">Equation Variables:</div>
                 <ul>
-                    <li><var>T</var> = Time (days)</li>
+                    <li><var>T</var> = Time (Days)</li>
                     <li><var>D</var> = Distance (Kilometers)</li>
                     <li><var>v</var> = Velocity (Kilometers per Second)</li>
                 </ul>
@@ -120,10 +120,10 @@
             <!-- Input equation varibles -->
             <div id="timingOfSolarEventsInput">
                 <ul>
-                    <li><var>D</var> = <input type="number" id="timingOfSolarEventsDistanceToSun" /> x 10 <sup><input
+                    <li><var>D</var> = <input type="number" id="timingOfSolarEventsDistanceToSun" required/> x 10 <sup><input
                                 type="number" id="timingOfSolarEventsDistanceToSunApplyScientificNotation" /></sup>
                         (Kilometers)</li>
-                    <li><var>v</var> = <input type="number" id="timingOfSolarEventsSpeedOfSolarWind" /> x 10 <sup><input
+                    <li><var>v</var> = <input type="number" id="timingOfSolarEventsSpeedOfSolarWind" required/> x 10 <sup><input
                                 type="number" id="timingOfSolarEventsSpeedOfSolarWindApplyScientificNotation" /></sup>
                         (Kilometers per
                         Second)</li>

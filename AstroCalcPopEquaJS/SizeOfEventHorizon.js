@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 28, 2020
-// Updated: June 28, 2020
+// Updated: July 6, 2020
 // - Will calculate wavelength
 
 define([], function() {

@@ -1,6 +1,6 @@
 // Tyler Livingston
 // Created: June 16, 2020
-// Updated: June 25, 2020
+// Updated: July 6, 2020
 // - Basic equation used in figuring out when
 //      events on the Sun will impact Earth.
 
@@ -21,7 +21,7 @@ const getDistanceToSun = function () {
         distance = distanceTemp;
         // console.log("Desired distance: " + distance);
     }
-    if (distance == null) {
+    if (distance == "") {
         alert("Please enter a valid input for the distance from the sun.")
     } else {
         return distance;
@@ -39,12 +39,11 @@ const getSpeedOfSolarWind = function () {
         speed = speedTemp;
         // console.log("Desired distance: " + speed);
     }
-    if (speed == null) {
+    if (speed == "") {
         alert("Please enter a valid input for the speed of a solar event.")
     } else {
-        
+        return speed;
     }
-    return speed;
 }
 
 const calculateEstimatedTimeOfImpact = function () {

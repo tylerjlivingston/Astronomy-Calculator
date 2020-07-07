@@ -1,15 +1,19 @@
 // Tyler Livingston
 // Created: June 2020
-// Updated: June 25, 2020
+// Updated: July 6, 2020
 // - Will calculate the estimated time 
 //     it would take to travel to another 
 //     star system, from Earth.
 
 define([], function () {
-    document.getElementById("travelToAnotherStarSystemResult").innerHTML = "Please enter data in all required feilds."
+    defualtResult.call();
     var mb = document.getElementById("travelToAnotherStarSystemSubmitButton");
     mb.addEventListener("click", provideAnswer);
 });
+
+function defualtResult() {
+    document.getElementById("travelToAnotherStarSystemResult").innerHTML = "Please enter data in all required feilds.";
+}
 
 const provideAnswer = function () {
     if (document.getElementById("travelToAnotherStarSystemUnit").value == "Metric") {
