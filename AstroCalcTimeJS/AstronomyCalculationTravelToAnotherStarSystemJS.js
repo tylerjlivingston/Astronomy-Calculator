@@ -6,10 +6,23 @@
 //     star system, from Earth.
 
 define([], function () {
+    // Default Result
     defualtResult.call();
+    // Set unit label
+    var uL = document.getElementById("travelToAnotherStarSystemUnit");
+    uL.addEventListener("change", travelToAnotherStarSystemSetUnitLabel);
+    // Calculate answer
     var mb = document.getElementById("travelToAnotherStarSystemSubmitButton");
     mb.addEventListener("click", provideAnswer);
 });
+
+function travelToAnotherStarSystemSetUnitLabel() {
+    if (document.getElementById("travelToAnotherStarSystemUnit").value == "Metric") {
+        document.getElementById("travelToAnotherStarSystemSpeedOfSpacecraftUnitLabel").innerHTML ="(KM/H)"
+    } else {
+        document.getElementById("travelToAnotherStarSystemSpeedOfSpacecraftUnitLabel").innerHTML ="(MPH)"
+    }
+}
 
 function defualtResult() {
     document.getElementById("travelToAnotherStarSystemResult").innerHTML = "Please enter data in all required feilds.";
@@ -74,5 +87,5 @@ function calculateTimeToStarSystem(unit) {
     var yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric = (hoursPerLightYear / numberOfHoursInOneYear);
     var amountOfTime = Math.round((distanceToStarSystem * yearsToTravelOneLightYearAtSpacecraftsTopSpeedInMetric));
     // console.log("Amount of time to travel: + amountOfTime);
-    document.getElementById("travelToAnotherStarSystemResult").innerHTML ="It will take you about <strong>" + parseInt(amountOfTime).toLocaleString() + " year(s)</strong> to travel, at the speed of " + parseInt(speedOfSpacecraft).toLocaleString() + " " + speedLabel + ", to a star system that is " + distanceToStarSystem + " Light-years away.";
+    document.getElementById("travelToAnotherStarSystemResult").innerHTML ="It will take you about <strong>" + parseFloat(amountOfTime).toLocaleString() + " year(s)</strong> to travel, at the speed of " + parseFloat(speedOfSpacecraft).toLocaleString() + " " + speedLabel + ", to a star system that is " + distanceToStarSystem + " Light-years away.";
 }

@@ -5,10 +5,14 @@
 //      events on the Sun will impact Earth.
 
 define([], function () {
-    document.getElementById("timingOfSolarEventsResult").innerHTML = "Please enter data in all required feilds.";
+    timingOfSolarEventsResultTemp.call();
     var mb = document.getElementById("timingOfSolarEventsSubmitButton");
     mb.addEventListener("click", calculateEstimatedTimeOfImpact);
 });
+
+function timingOfSolarEventsResultTemp() {
+    document.getElementById("timingOfSolarEventsResult").innerHTML = "Please enter data in all required feilds.";
+}
 
 const getDistanceToSun = function () {
     var distance = null;
