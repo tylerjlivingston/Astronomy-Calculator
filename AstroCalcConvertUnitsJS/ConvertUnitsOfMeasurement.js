@@ -1,4 +1,11 @@
+// Author: Tyler Livingston
+// Start date: July 8, 2020
+// Updated: July 8, 2020
+// Purpose: To calculate common equations related to astronomy
+
 define([], function () {
+    defaultResult.call();
+
     var measurementValueOneUnit = document.getElementById("measurementValueOneUnit");
     measurementValueOneUnit.addEventListener("change", convertUnits);
 
@@ -8,6 +15,10 @@ define([], function () {
     var measurementValueOne = document.getElementById("measurementValueOne");
     measurementValueOne.addEventListener("change", convertUnits);
 });
+
+function defaultResult() {
+    document.getElementById("ConvertDistanceMeasurementsResult").innerHTML = "Enter values to convert.";
+}
 
 function convertUnits() {
     var unitToConvert = document.getElementById("measurementValueTwoUnit").value;
@@ -30,12 +41,16 @@ function convertUnits() {
             break;
     }
     
+    // Used for imput
+    document.getElementById("measurementValueTwo").innerHTML = parseFloat(valueConverted);
+
+    // Used for readability
     if (String(valueConverted).includes("e")) {
-        document.getElementById("measurementValueTwo").innerHTML = parseFloat(valueConverted);
+        document.getElementById("ConvertDistanceMeasurementsResult").innerHTML = value + " " + document.getElementById("measurementValueOneUnit").value + " ≈ " + parseFloat(valueConverted) + " " + unitToConvert;
     }else if (parseInt(valueConverted) < 1000) {
-        document.getElementById("measurementValueTwo").innerHTML = parseFloat(valueConverted).toFixed(3);
+        document.getElementById("ConvertDistanceMeasurementsResult").innerHTML = value + " " + document.getElementById("measurementValueOneUnit").value + " ≈ " + parseFloat(valueConverted).toFixed(3) + " " + unitToConvert;
     }else {
-        document.getElementById("measurementValueTwo").innerHTML = parseFloat(valueConverted).toLocaleString();
+        document.getElementById("ConvertDistanceMeasurementsResult").innerHTML = value + " " + document.getElementById("measurementValueOneUnit").value + " ≈ " + parseFloat(valueConverted).toLocaleString() + " " + unitToConvert;
     }
 }
 

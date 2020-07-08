@@ -4,7 +4,7 @@
     <!--
         Author: Tyler Livingston
         Start date: 6/15/2020
-        Updated: 6/16/2020
+        Updated: July 8, 2020
         Purpose: To calculate common equations related to astronomy
         -->
     <meta charset="utf-8" />
@@ -34,7 +34,7 @@
     <article>
         <h1>Convert Units</h1>
         <div id="calculation">
-            <h2 id="calculationHeader">Convert Distance Units of Measurement</h2>
+            <h2 id="calculationHeader">Convert Distance Measurements</h2>
             <div id="userInputLabel">Enter Data:</div>
             <label id="measurementValueOneLabel">
                 <input type="number" id="measurementValueOne" value="0" required />
@@ -46,7 +46,7 @@
                 </select>
             </label>
 
-            =
+            ≈
 
             <label id="measurementValueTwoLabel">
                 <span id="measurementValueTwo">0</span>
@@ -57,7 +57,42 @@
                     <option value="Astronomical Unit(s)">Astronomical Unit(s)</option>
                 </select>
             </label>
-            <br><br>
+
+            <!-- results -->
+            <div id="ConvertDistanceMeasurementsResultArea">
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="ConvertDistanceMeasurementsResult"></div>
+            </div>
+        </div>
+
+        <div id="calculation">
+            <h2 id="calculationHeader">Convert Temperature Values</h2>
+            <div id="userInputLabel">Enter Data:</div>
+            <label id="temperatureValueOneLabel">
+                <input type="number" id="temperatureValueOne" value="0" required />
+                <select id="temperatureValueOneUnit">
+                    <option value="Fahrenheit (F)" selected>Fahrenheit (F)</option>
+                    <option value="Celsius (C)">Celsius (C)</option>
+                    <option value="Kelvin (K)">Kelvin (K)</option>
+                </select>
+            </label>
+
+            ≈
+
+            <label id="temperatureValueTwoLabel">
+                <span id="temperatureValueTwo">0</span>
+                <select id="temperatureValueTwoUnit">
+                    <option value="Fahrenheit (F)" selected>Fahrenheit (F)</option>
+                    <option value="Celsius (C)">Celsius (C)</option>
+                    <option value="Kelvin (K)">Kelvin (K)</option>
+                </select>
+            </label>
+
+            <!-- results -->
+            <div id="ConvertDistanceTemperatureResultArea">
+                <div id=resultLabel>Calculated Answer:</div>
+                <div id="ConvertDistanceTemperatureResult"></div>
+            </div>
         </div>
 
     </article>

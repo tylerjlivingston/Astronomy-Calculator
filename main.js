@@ -12,6 +12,7 @@ define([
     "AstroCalcOtherJS/LightGatheringAbilityJS",
     "AstroCalcOtherJS/WaitTimeForRadioCommunication",
     "AstroCalcConvertUnitsJS/ConvertUnitsOfMeasurement",
+    "AstroCalcConvertUnitsJS/ConvertUnitsOfTemperature",
     'footer',
 ], function() {
     
