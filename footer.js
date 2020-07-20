@@ -5,5 +5,5 @@
 
 define([], function() {
     document.getElementById("companyName").innerHTML="Tyler Livingston 2020";
-    document.getElementById("versionNumber").innerHTML="Version: 0.1.0";
+    document.getElementById("versionNumber").innerHTML="Version: 0.2.0";
 });

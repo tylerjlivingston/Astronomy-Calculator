@@ -17,7 +17,7 @@ define([], function () {
 });
 
 function defaultconvertTemperatureValuesResult() {
-    document.getElementById("ConvertDistanceTemperatureResult").innerHTML = "Enter values to convert.";
+    convertTemperatureValues.call();
 }
 
 function convertTemperatureValues() {

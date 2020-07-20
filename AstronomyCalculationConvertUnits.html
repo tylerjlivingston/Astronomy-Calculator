@@ -34,11 +34,11 @@
     <article>
         <h1>Convert Units</h1>
         <div id="calculation">
-            <h2 id="calculationHeader">Convert Distance Measurements</h2>
+            <h2 id="calculationHeader">Convert Length Measurements</h2>
             <div id="userInputLabel">Enter Data:</div>
-            <label id="measurementValueOneLabel">
-                <input type="number" id="measurementValueOne" value="0" required />
-                <select id="measurementValueOneUnit">
+            <label id="lengthValueOneLabel">
+                <input type="number" id="lengthValueOne" value="0" required />
+                <select id="lengthValueOneUnit">
                     <option value="Light-year(s)" selected>Light-year(s)</option>
                     <option value="Mile(s)">Mile(s)</option>
                     <option value="Kilometer(s)">Kilometer(s)</option>
@@ -48,20 +48,20 @@
 
             ≈
 
-            <label id="measurementValueTwoLabel">
-                <span id="measurementValueTwo">0</span>
-                <select id="measurementValueTwoUnit">
-                    <option value="Light-year(s)" selected>Light-year(s)</option>
-                    <option value="Mile(s)">Mile(s)</option>
+            <label id="lengthValueTwoLabel">
+                <span id="lengthValueTwo">0</span>
+                <select id="lengthValueTwoUnit">
+                    <option value="Light-year(s)">Light-year(s)</option>
+                    <option value="Mile(s)"selected>Mile(s)</option>
                     <option value="Kilometer(s)">Kilometer(s)</option>
                     <option value="Astronomical Unit(s)">Astronomical Unit(s)</option>
                 </select>
             </label>
 
             <!-- results -->
-            <div id="ConvertDistanceMeasurementsResultArea">
+            <div id="ConvertDistanceLengthResultArea">
                 <div id=resultLabel>Calculated Answer:</div>
-                <div id="ConvertDistanceMeasurementsResult"></div>
+                <div id="ConvertDistanceLengthResult"></div>
             </div>
         </div>
 
@@ -82,8 +82,8 @@
             <label id="temperatureValueTwoLabel">
                 <span id="temperatureValueTwo">0</span>
                 <select id="temperatureValueTwoUnit">
-                    <option value="Fahrenheit (F)" selected>Fahrenheit (F)</option>
-                    <option value="Celsius (C)">Celsius (C)</option>
+                    <option value="Fahrenheit (F)">Fahrenheit (F)</option>
+                    <option value="Celsius (C)" selected>Celsius (C)</option>
                     <option value="Kelvin (K)">Kelvin (K)</option>
                 </select>
             </label>

@@ -11,7 +11,7 @@ define([
     "AstroCalcPopEquaJS/SizeOfEventHorizon",
     "AstroCalcOtherJS/LightGatheringAbilityJS",
     "AstroCalcOtherJS/WaitTimeForRadioCommunication",
-    "AstroCalcConvertUnitsJS/ConvertUnitsOfMeasurement",
+    "AstroCalcConvertUnitsJS/ConvertUnitsOfLength",
     "AstroCalcConvertUnitsJS/ConvertUnitsOfTemperature",
     'footer',
 ], function() {
